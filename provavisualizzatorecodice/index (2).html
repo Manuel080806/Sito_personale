@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizzatore del Codice Sorgente</title>
+  <!-- Includiamo Prism.js per la colorazione -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #000; /* Sfondo pagina nero */
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .tabs button {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .tabs button:hover {
+      background-color: #005f73;
+    }
+    .tabs button.active {
+      background-color: #005f73;
+    }
+    .code-container {
+      display: none;
+    }
+    .code-container.active {
+      display: block;
+    }
+    pre {
+      background-color: #333; /* Sfondo grigio scuro per il blocco di codice */
+      color: #f8f8f2;
+      padding: 15px;
+      border: 1px solid #000; /* Bordo nero scuro */
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Visualizzatore del Codice Sorgente</h1>
+
+  <!-- Sezione per le schede -->
+  <div class="tabs">
+    <button class="tab-button active" data-tab="html">HTML</button>
+    <button class="tab-button" data-tab="css">CSS</button>
+    <button class="tab-button" data-tab="js">JavaScript</button>
+  </div>
+
+  <!-- Contenitori per il codice (inizialmente vuoti, saranno popolati tramite JSON) -->
+  <div id="html" class="code-container active">
+    <pre><code class="language-html">Caricamento...</code></pre>
+  </div>
+
+  <div id="css" class="code-container">
+    <pre><code class="language-css">Caricamento...</code></pre>
+  </div>
+
+  <div id="js" class="code-container">
+    <pre><code class="language-javascript">Caricamento...</code></pre>
+  </div>
+
+  <!-- Inclusione della libreria Prism.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script>
+    // Funzione per caricare il file JSON con i codici sorgente
+    function loadCode() {
+      fetch('code.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Errore nel caricamento del file JSON');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Aggiorna i contenuti dei container con il codice proveniente dal JSON
+          document.querySelector('#html code').textContent = data.html;
+          document.querySelector('#css code').textContent = data.css;
+          document.querySelector('#js code').textContent = data.js;
+          
+          // Richiama Prism per evidenziare la sintassi
+          Prism.highlightAll();
+        })
+        .catch(error => {
+          console.error('Si è verificato un errore:', error);
+        });
+    }
+
+    // Gestione del cambio di scheda
+    const buttons = document.querySelectorAll('.tab-button');
+    const containers = document.querySelectorAll('.code-container');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Rimuove la classe 'active' da tutti i bottoni
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Aggiunge la classe 'active' al bottone cliccato
+        button.classList.add('active');
+
+        // Nasconde tutti i contenitori di codice
+        containers.forEach(container => container.classList.remove('active'));
+        // Mostra il contenitore corrispondente alla scheda selezionata
+        document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+
+    // Carica il codice una volta che il DOM è pronto
+    document.addEventListener('DOMContentLoaded', loadCode);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

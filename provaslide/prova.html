@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualizzatore di Slide - Funzione per Immagini</title>
+  <style>
+    /* Impostazioni di base */
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;  /* Sfondo scuro */
+      color: #fff;  /* Testo in bianco */
+    }
+
+    /* Contenitore dello slideshow */
+    .slideshow-container {
+      margin: 40px auto;
+      max-width: 800px;
+      background-color: #1e1e1e; /* Area slideshow scura */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Ogni slide */
+    .mySlides {
+      display: none;
+    }
+
+    /* Immagini responsive */
+    .mySlides img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Contenitore delle frecce di navigazione (sotto le immagini) */
+    .arrow-container {
+      max-width: 800px;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .arrow-container a {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+      padding: 10px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .arrow-container a:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Contenitore dei puntini per la navigazione */
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #121212;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Effetto fade per le slide */
+    .fade {
+      animation-name: fade;
+      animation-duration: 0.5s;
+    }
+    @keyframes fade {
+      from { opacity: 0.4; } 
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenitore principale dello slideshow -->
+  <div id="slideshow-container" class="slideshow-container"></div>
+
+  <!-- Contenitore delle frecce di navigazione (sotto lo slideshow) -->
+  <div class="arrow-container">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <!-- Contenitore dei puntini per la navigazione -->
+  <div id="dot-container" class="dot-container"></div>
+
+  <script>
+    /**
+     * Funzione per generare le slide e i puntini di navigazione.
+     * @param {Array} imagePaths - Array contenente i percorsi delle immagini.
+     */
+    function generateSlides(imagePaths) {
+      const container = document.getElementById("slideshow-container");
+      const dotContainer = document.getElementById("dot-container");
+      
+      // Pulizia dei contenitori in caso contengano già dei contenuti
+      container.innerHTML = "";
+      dotContainer.innerHTML = "";
+      
+      imagePaths.forEach((path, index) => {
+        // Creazione del div per la slide
+        const slideDiv = document.createElement("div");
+        slideDiv.className = "mySlides fade";
+        
+        // Creazione dell'elemento immagine
+        const img = document.createElement("img");
+        img.src = path;
+        img.alt = "Slide " + (index + 1);
+        
+        // Aggiunta dell'immagine al div della slide
+        slideDiv.appendChild(img);
+        container.appendChild(slideDiv);
+        
+        // Creazione del puntino per la navigazione
+        const dot = document.createElement("span");
+        dot.className = "dot";
+        dotContainer.appendChild(dot);
+      });
+    }
+
+    // Esempio di utilizzo della funzione: passa un array con i percorsi delle immagini
+    const images = ["img1.jpeg", "img2.jpeg", "img3.jpeg"];
+    generateSlides(images);
+
+    // Variabili per il controllo dello slideshow
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+
+    // Funzione per mostrare la slide corrente
+    function showSlide(index) {
+      if (index >= slides.length) {
+        slideIndex = 0;
+      }
+      if (index < 0) {
+        slideIndex = slides.length - 1;
+      }
+      // Nasconde tutte le slide
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      // Rimuove la classe "active" da tutti i puntini
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      // Mostra la slide corrente e attiva il puntino corrispondente
+      slides[slideIndex].style.display = "block";
+      dots[slideIndex].classList.add("active");
+    }
+
+    // Funzioni per passare alla slide successiva o precedente
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+    function prevSlide() {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+
+    // Event listener per i pulsanti di navigazione
+    prev.addEventListener("click", prevSlide);
+    next.addEventListener("click", nextSlide);
+
+    // Event listener per la navigazione tramite puntini
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].addEventListener("click", function() {
+        slideIndex = i;
+        showSlide(slideIndex);
+      });
+    }
+
+    // Inizializza la prima slide
+    showSlide(slideIndex);
+  </script>
+
+</body>
+</html>
