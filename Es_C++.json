@@ -1,0 +1,120 @@
+{
+    "esercizzi":[
+        {
+            "numero":1,
+            "titolo":"esercizio numero 1",
+            "tipo":"primi primi es semplici",
+            "testo":"Calcolare il perimetro di un rettangolo date le misure dell'area e della base.",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_1/sequenza 1.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_1/sequenza 1.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_1/esercizio_sequenza_n_1.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_1/esercizio_sequenza_n_1.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_1/esercizio_sequenza_n_1.json"
+        },
+        {
+            "numero":2,
+            "titolo":"esercizio numero 2",
+            "tipo":"primi primi es semplici",
+            "testo":"Calcolare l'area di un rettangolo date le misure del perimetro e dell'altezza.",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_2/sequenza 2.drawio.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_2/sequenza 2.drawio.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_2/esercizio_sequenza_n_2.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_2/esercizio_sequenza_n_2.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_2/esercizio_sequenza_n_2.json"
+        },
+        {
+            "numero":3,
+            "titolo":"esercizio numero 3",
+            "tipo":"primi primi es semplici",
+            "testo":"Calcolare l'area di un triangolo rettangolo data la misura del cateto minore e sapendo che un cateto e' 3/5 dell'altro.",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_3/sequenza 3.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_3/sequenza 3.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_3/esercizio_sequenza_n_3.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_3/esercizio_sequenza_n_3.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_3/esercizio_sequenza_n_3.json"
+        },
+        {
+            "numero":4,
+            "titolo":"esercizio numero 4",
+            "tipo":"primi primi es semplici",
+            "testo":"Calcolare il prezzo di un articolo conoscendo il prezzo base, lo sconto percentuale da applicare e l’iva.",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_4/sequenza n.4.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_4/sequenza n.4.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_4/esercizio_sequenza_n_4.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_4/esercizio_sequenza_n_4.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_4/esercizio_sequenza_n_4.json"
+        },
+        {
+            "numero":5,
+            "titolo":"esercizio numero 5",
+            "tipo":"primi primi es semplici",
+            "testo":"Di un oggetto si conosce il prezzo comprensivo dell'IVA; determinarne il prezzo netto.",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_5/sequenza n.5.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_5/sequenza n.5.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_5/esercizio_sequenza_n_5.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_5/esercizio_sequenza_n_5.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_5/esercizio_sequenza_n_5.json"
+        },
+        {
+            "numero":6,
+            "titolo":"esercizio numero 6",
+            "tipo":"primi primi es semplici",
+            "testo":"Un'automobile percorre 20 km con un litro di benzina. Calcolare la spesa necessaria a percorrere 100 km ",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_6/sequenza n.6.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_6/sequenza n.6.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_6/esercizio_sequenza_n_6.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_6/esercizio_sequenza_n_6.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_6/esercizio_sequenza_n_6.json"
+        },{
+            "numero":7,
+            "titolo":"esercizio numero 7",
+            "tipo":"primi primi es semplici",
+            "testo":"Calcolare il successivo del doppio del quadrato di un numero.",
+            "pathimig":"../esercizi/primi_es_cpp/esercizio_7/sequenza n.7.png",
+            "pathhtml":"../esercizi/primi_es_cpp/esercizio_7/sequenza n.7.html",
+            "pathfile":"../esercizi/primi_es_cpp/esercizio_7/esercizio_sequenza_n_7.cpp",
+            "pathfileexe":"../esercizi/primi_es_cpp/esercizio_7/esercizio_sequenza_n_7.exe",
+            "pathfilecodici":"../esercizi/primi_es_cpp/esercizio_7/esercizio_sequenza_n_7.json"
+        },{
+            "numero":8,
+            "titolo":"esercizio numero 8",
+            "tipo":"primi primi es semplici",
+            "testo":"Calcolare il quadrato del successivo del doppio di un numero.",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },{
+            "numero":9,
+            "titolo":"",
+            "tipo":"",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },{
+            "numero":10,
+            "titolo":"",
+            "tipo":"",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },{
+            "numero":11,
+            "titolo":"",
+            "tipo":"",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        }
+    ]
+}
