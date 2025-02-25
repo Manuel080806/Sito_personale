@@ -274,6 +274,94 @@
             "pathfile":"",
             "pathfileexe":"",
             "pathfilecodici":""
+        },
+        {
+            "numero":4,
+            "titolo":"esercizio numero 4",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":5,
+            "titolo":"esercizio numero 5",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":6,
+            "titolo":"esercizio numero 6",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":7,
+            "titolo":"esercizio numero 7",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":8,
+            "titolo":"esercizio numero 8",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":9,
+            "titolo":"esercizio numero 9",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":10,
+            "titolo":"esercizio numero 10",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
+        },
+        {
+            "numero":11,
+            "titolo":"esercizio numero 11",
+            "tipo":"primi es con cicli ",
+            "testo":"",
+            "pathimig":"",
+            "pathhtml":"",
+            "pathfile":"",
+            "pathfileexe":"",
+            "pathfilecodici":""
         }
     ]
 }
