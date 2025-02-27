@@ -1,17 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main()
+main()
 {
-    int n;
-    cout<<"inserire un numero"<<endl;
-    cin>>n;
-    if(n%2!=0)
-        n =n - 1;
-    do
-    {
-        cout << n << endl;
-        n = n-2;
-    }
-    while (n!=0);
-    return 0;
+
+	int n1,n2;
+	cout<<"Iniziamo a stampare"<<endl;
+	cout<<"Inserisci il primo numero"<<endl;
+	cin>>n1;
+	cout<<"Inserisci il secondo numero"<<endl;
+	cin>>n2;
+	int i=n1;
+	cout<<"I numeri all' interno dell' intervallo sono:"<<endl;
+	while (i<=n2)
+	{
+		cout<<i<<endl;
+		i=i+1;
+	}
+	system("PAUSE");
 }

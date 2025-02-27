@@ -247,22 +247,22 @@
             "titolo":"esercizio numero 1",
             "tipo":"primi es con cicli ",
             "testo":"Stampare i numeri pari minori di N.",
-            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.png",
-            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.html",
-            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.cpp",
-            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.exe",
-            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.json"
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_1/es_1_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_1/es_1_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_1/es_1_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_1/es_1_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_1/es_1_cicli.json"
         },
         {
             "numero":2,
             "titolo":"esercizio numero 2",
             "tipo":"primi es con cicli ",
             "testo":"Dati 2 numeri in input stampare tutti i numeri compresi.",
-            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.png",
-            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.html",
-            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.cpp",
-            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.exe",
-            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.json"
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_2/es_2_cicli.json"
         },
         {
             "numero":3,
