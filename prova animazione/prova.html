@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Developer</title>
+    <style>
+        /* Reset e stili di base */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: #0e1117;
+        }
+        
+        /* Schermata di caricamento */
+        #loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #0e1117;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease-in-out;
+        }
+        
+        /* Contenitore dell'animazione */
+        #code-animation {
+            width: 80%;
+            max-width: 800px;
+            height: 60vh;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+            background-color: #1a1e25;
+        }
+        
+        /* Area del "codice" */
+        #code-area {
+            padding: 20px;
+            color: #e0e0e0;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre;
+            overflow: hidden;
+            height: calc(100% - 40px);
+        }
+        
+        /* Stili per il "codice" */
+        .keyword {
+            color: #ff79c6;
+        }
+        
+        .function {
+            color: #50fa7b;
+        }
+        
+        .string {
+            color: #f1fa8c;
+        }
+        
+        .comment {
+            color: #6272a4;
+        }
+        
+        .number {
+            color: #bd93f9;
+        }
+        
+        .variable {
+            color: #8be9fd;
+        }
+        
+        .property {
+            color: #ffb86c;
+        }
+        
+        /* Barra di progresso */
+        #progress-bar {
+            width: 80%;
+            max-width: 800px;
+            height: 6px;
+            background-color: #2c313a;
+            border-radius: 3px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        
+        #progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4ecdc4, #556270);
+            transition: width 0.3s ease-out;
+        }
+        
+        /* Testo di stato e percentuale */
+        #progress-status {
+            color: #4ecdc4;
+            font-size: 16px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        
+        /* Bottone per entrare nel sito */
+        #enter-site-btn {
+            background-color: #4ecdc4;
+            color: #0e1117;
+            border: none;
+            padding: 12px 35px;
+            margin-top: 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            box-shadow: 0 0 15px rgba(78, 205, 196, 0.5);
+        }
+        
+        #enter-site-btn:hover {
+            background-color: #fff;
+            transform: translateY(0) scale(1.05);
+            box-shadow: 0 0 25px rgba(78, 205, 196, 0.8);
+        }
+        
+        /* Cursore lampeggiante */
+        #cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #4ecdc4;
+            animation: blink 1s infinite;
+            position: relative;
+            top: 3px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Contenuto della Home Page */
+        #home-content {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: #4ecdc4;
+        }
+        
+        .hero-section {
+            display: flex;
+            align-items: center;
+            height: 80vh;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        .hero-text h1 span {
+            color: #4ecdc4;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background-color: #4ecdc4;
+            color: #0e1117;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(78, 205, 196, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Schermata di caricamento con animazione di codice -->
+    <div id="loading-screen">
+        <div id="code-animation">
+            <div id="code-area"></div>
+        </div>
+        <div id="progress-status">Inizializzazione...</div>
+        <div id="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+        <button id="enter-site-btn">ENTRA NEL SITO</button>
+    </div>
+    
+    <!-- Contenuto della Home Page -->
+    <div id="home-content">
+        <div class="header">
+            <div class="logo">DevPortfolio</div>
+            <div class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">Progetti</a>
+                <a href="#">Competenze</a>
+                <a href="#">Chi sono</a>
+                <a href="#">Contatti</a>
+            </div>
+        </div>
+        
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>Ciao, sono <span>Marco</span></h1>
+                <p>Sviluppatore Web & Software con passione per la creazione di esperienze digitali innovative e performanti.</p>
+                <button class="cta-button">Scopri i miei progetti</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Elementi DOM
+        const loadingScreen = document.getElementById('loading-screen');
+        const codeArea = document.getElementById('code-area');
+        const progressBar = document.getElementById('progress-fill');
+        const progressStatus = document.getElementById('progress-status');
+        const enterSiteBtn = document.getElementById('enter-site-btn');
+        const homeContent = document.getElementById('home-content');
+        
+        // Codice da visualizzare nella schermata di caricamento
+        const codeSnippets = [
+            `<span class="comment">// Inizializzazione del portfolio</span>
+<span class="keyword">class</span> <span class="function">PortfolioDeveloper</span> {
+    <span class="keyword">constructor</span>() {
+        <span class="keyword">this</span>.<span class="property">name</span> = <span class="string">"Marco"</span>;
+        <span class="keyword">this</span>.<span class="property">title</span> = <span class="string">"Web & Software Developer"</span>;
+        <span class="keyword">this</span>.<span class="property">skills</span> = [
+            <span class="string">"JavaScript"</span>, 
+            <span class="string">"React"</span>, 
+            <span class="string">"Node.js"</span>, 
+            <span class="string">"Python"</span>, 
+            <span class="string">"Three.js"</span>
+        ];
+        <span class="keyword">this</span>.<span class="property">experience</span> = <span class="number">5</span>;
+    }
+
+    <span class="function">initialize</span>() {
+        <span class="comment">// Caricamento componenti...</span>
+        <span class="keyword">return</span> <span class="keyword">new</span> <span class="function">Promise</span>(<span class="variable">resolve</span> => {
+            <span class="keyword">this</span>.<span class="function">loadComponents</span>();
+            <span class="function">setTimeout</span>(() => <span class="variable">resolve</span>(<span class="keyword">true</span>), <span class="number">800</span>);
+        });
+    }`,
+            
+            `    <span class="function">loadComponents</span>() {
+        <span class="comment">// Caricamento UI...</span>
+        <span class="keyword">const</span> <span class="variable">ui</span> = <span class="keyword">new</span> <span class="function">UserInterface</span>();
+        <span class="variable">ui</span>.<span class="function">render</span>();
+        
+        <span class="comment">// Caricamento progetti...</span>
+        <span class="keyword">const</span> <span class="variable">projects</span> = <span class="keyword">this</span>.<span class="function">fetchProjects</span>();
+        <span class="keyword">this</span>.<span class="function">renderProjects</span>(<span class="variable">projects</span>);
+        
+        <span class="comment">// Analisi performance...</span>
+        <span class="keyword">this</span>.<span class="function">analyzePerformance</span>();
+    }
+    
+    <span class="function">fetchProjects</span>() {
+        <span class="comment">// Recupero progetti dal database</span>
+        <span class="keyword">return</span> [
+            { 
+                <span class="property">id</span>: <span class="string">"proj-1"</span>, 
+                <span class="property">name</span>: <span class="string">"E-commerce Platform"</span>,
+                <span class="property">tech</span>: [<span class="string">"React"</span>, <span class="string">"Node.js"</span>, <span class="string">"MongoDB"</span>]
+            },`,
+            
+            `            { 
+                <span class="property">id</span>: <span class="string">"proj-2"</span>, 
+                <span class="property">name</span>: <span class="string">"Portfolio 3D"</span>,
+                <span class="property">tech</span>: [<span class="string">"Three.js"</span>, <span class="string">"JavaScript"</span>]
+            },
+            { 
+                <span class="property">id</span>: <span class="string">"proj-3"</span>, 
+                <span class="property">name</span>: <span class="string">"App Mobile"</span>,
+                <span class="property">tech</span>: [<span class="string">"React Native"</span>, <span class="string">"Firebase"</span>]
+            }
+        ];
+    }
+    
+    <span class="function">renderProjects</span>(<span class="variable">projects</span>) {
+        <span class="comment">// Rendering dei progetti nella UI</span>
+        <span class="variable">projects</span>.<span class="function">forEach</span>(<span class="variable">project</span> => {
+            <span class="keyword">const</span> <span class="variable">element</span> = <span class="keyword">new</span> <span class="function">ProjectCard</span>(<span class="variable">project</span>);
+            <span class="variable">element</span>.<span class="function">render</span>();
+        });
+    }`,
+            
+            `    <span class="function">analyzePerformance</span>() {
+        <span class="comment">// Controllo delle performance della pagina</span>
+        <span class="keyword">const</span> <span class="variable">metrics</span> = {
+            <span class="property">loadTime</span>: <span class="number">1.2</span>,
+            <span class="property">firstPaint</span>: <span class="number">0.8</span>,
+            <span class="property">firstContentfulPaint</span>: <span class="number">1.0</span>,
+            <span class="property">interactive</span>: <span class="number">1.5</span>
+        };
+        
+        <span class="comment">// Ottimizzazione se necessario</span>
+        <span class="keyword">if</span> (<span class="variable">metrics</span>.<span class="property">loadTime</span> > <span class="number">2.0</span>) {
+            <span class="keyword">this</span>.<span class="function">optimizeAssets</span>();
+        }
+        
+        <span class="keyword">return</span> <span class="variable">metrics</span>;
+    }
+    
+    <span class="function">start</span>() {
+        <span class="comment">// Avvio dell'applicazione</span>
+        <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">"Portfolio pronto!"</span>);
+        <span class="keyword">document</span>.<span class="function">dispatchEvent</span>(<span class="keyword">new</span> <span class="function">CustomEvent</span>(<span class="string">'portfolio-loaded'</span>));
+    }
+}`,
+            
+            `<span class="comment">// Inizializzazione del portfolio</span>
+<span class="keyword">const</span> <span class="variable">portfolio</span> = <span class="keyword">new</span> <span class="function">PortfolioDeveloper</span>();
+
+<span class="comment">// Sequenza di avvio</span>
+<span class="keyword">async</span> <span class="function">function</span> <span class="function">startPortfolio</span>() {
+    <span class="keyword">try</span> {
+        <span class="comment">// Configurazione dell'ambiente</span>
+        <span class="keyword">await</span> <span class="function">setupEnvironment</span>();
+        
+        <span class="comment">// Inizializzazione del portfolio</span>
+        <span class="keyword">await</span> <span class="variable">portfolio</span>.<span class="function">initialize</span>();
+        
+        <span class="comment">// Avvio dell'applicazione</span>
+        <span class="variable">portfolio</span>.<span class="function">start</span>();
+        
+        <span class="keyword">return</span> <span class="string">"Portfolio caricato con successo!"</span>;
+    } <span class="keyword">catch</span> (<span class="variable">error</span>) {
+        <span class="keyword">console</span>.<span class="function">error</span>(<span class="string">"Errore durante l'avvio:"</span>, <span class="variable">error</span>);
+        <span class="keyword">return</span> <span class="string">"Si è verificato un errore."</span>;
+    }
+}
+
+<span class="comment">// Esecuzione</span>
+<span class="function">startPortfolio</span>();`
+        ];
+        
+        // Cursore lampeggiante
+        const cursor = '<span id="cursor"></span>';
+        
+        // Variabili per l'animazione
+        let currentSnippetIndex = 0;
+        let typingSpeed = 5; // millisecondi tra ogni carattere
+        let progress = 0;
+        let isCompleted = false;
+        
+        // Funzione per simulare la digitazione
+        function typeCode() {
+            if (currentSnippetIndex >= codeSnippets.length) {
+                // Abbiamo finito tutti gli snippet, mostra il pulsante
+                completeLoading();
+                return;
+            }
+            
+            const snippet = codeSnippets[currentSnippetIndex];
+            let i = 0;
+            
+            // Simulazione digitazione carattere per carattere
+            function typeCharacter() {
+                // Se abbiamo completato lo snippet corrente
+                if (i >= snippet.length) {
+                    currentSnippetIndex++;
+                    setTimeout(typeCode, 500); // Pausa prima del prossimo snippet
+                    return;
+                }
+                
+                // Aggiorna il contenuto del codice
+                codeArea.innerHTML = snippet.substring(0, i + 1) + cursor;
+                codeArea.scrollTop = codeArea.scrollHeight;
+                i++;
+                
+                // Aggiorna la barra di progresso
+                updateProgress(i,snippet);
+                
+                // Continua a digitare
+                setTimeout(typeCharacter, Math.random() * typingSpeed + 5);
+            }
+            
+            typeCharacter();
+        }
+        
+        // Aggiorna la barra di progresso
+        function updateProgress(f,snippet) {
+            let c = f;
+            // Calcola la percentuale di completamento basata sugli snippet
+            const totalSnippets = codeSnippets.length;
+            const percentPerSnippet = 100 / totalSnippets;
+            progress = (currentSnippetIndex * percentPerSnippet) + 
+                      (c / snippet.length * percentPerSnippet);
+            
+            // Aggiorna la UI
+            progressBar.style.width = `${progress}%`;
+            
+            // Aggiorna il testo di stato
+            if (progress < 30) {
+                progressStatus.textContent = `Caricamento componenti... ${Math.floor(progress)}%`;
+            } else if (progress < 60) {
+                progressStatus.textContent = `Caricamento progetti... ${Math.floor(progress)}%`;
+            } else if (progress < 90) {
+                progressStatus.textContent = `Ottimizzazione performance... ${Math.floor(progress)}%`;
+            } else if(progress<99){
+                progressStatus.textContent = `Finalizzazione... ${Math.floor(progress)}%`;
+            } else if(progress == 100){
+                fine();
+            }
+        }
+        
+        // Completa il caricamento
+        function completeLoading() {
+            if (isCompleted) return;
+            isCompleted = true;
+            // Imposta la barra di progresso al 100%
+            progressBar.style.width = '100%';
+            progressStatus.textContent = 'Caricamento completato!';
+            
+            // Mostra il pulsante per entrare nel sito
+            setTimeout(() => {
+                enterSiteBtn.style.opacity = '1';
+                enterSiteBtn.style.transform = 'translateY(0)';
+            }, 500);
+
+            
+        }
+        
+        // Inizia l'animazione all'avvio della pagina
+        window.addEventListener('load', () => {
+            // Breve ritardo per assicurarsi che tutto sia pronto
+            setTimeout(() => {
+                typeCode();
+            }, 500);
+            
+            // Nel caso in cui l'animazione sia troppo lunga, mostriamo il pulsante dopo 10 secondi
+            setTimeout(() => {
+                completeLoading();
+            }, 20000);
+        });
+        
+        // Gestisci il click sul pulsante per entrare nel sito
+        enterSiteBtn.addEventListener('click', () => {
+            loadingScreen.style.opacity = '0';
+            homeContent.style.opacity = '1';
+            
+            // Dopo la transizione, rimuovi la schermata di caricamento
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 800);
+        });
+        function fine(){
+            loadingScreen.style.opacity = '0';
+            homeContent.style.opacity = '1';
+            
+            // Dopo la transizione, rimuovi la schermata di caricamento
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
