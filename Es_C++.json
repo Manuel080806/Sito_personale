@@ -269,99 +269,99 @@
             "titolo":"esercizio numero 3",
             "tipo":"primi es con cicli ",
             "testo":"Calcola la somma dei numeri da 1 a n",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_3/es_3_cicli.json"
         },
         {
             "numero":4,
             "titolo":"esercizio numero 4",
             "tipo":"primi es con cicli ",
             "testo":"Stampa tutti i numeri pari tra 1 e 50",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_4/es_4_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_4/es_4_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_4/es_4_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_4/es_4_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_4/es_4_cicli.json"
         },
         {
             "numero":5,
             "titolo":"esercizio numero 5",
             "tipo":"primi es con cicli ",
             "testo":"Calcola il fattoriale di un numero",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_5/es_5_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_5/es_5_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_5/es_5_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_5/es_5_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_5/es_5_cicli.json"
         },
         {
             "numero":6,
             "titolo":"esercizio numero 6",
             "tipo":"primi es con cicli ",
-            "testo":"",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "testo":"Trova tutti i divisori di un numero",
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_6/es_6_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_6/es_6_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_6/es_6_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_6/es_6_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_6/es_6_cicli.json"
         },
         {
             "numero":7,
             "titolo":"esercizio numero 7",
             "tipo":"primi es con cicli ",
-            "testo":"",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "testo":"Stampa la tabellina di un numero",
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_7/es_7_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_7/es_7_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_7/es_7_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_7/es_7_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_7/es_7_cicli.json"
         },
         {
             "numero":8,
             "titolo":"esercizio numero 8",
             "tipo":"primi es con cicli ",
-            "testo":"",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "testo":"Stampa un triangolo di asterischi",
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_8/es_8_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_8/es_8_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_8/es_8_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_8/es_8_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_8/es_8_cicli.json"
         },
         {
             "numero":9,
             "titolo":"esercizio numero 9",
             "tipo":"primi es con cicli ",
-            "testo":"",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "testo":" Stampa gli elementi di un array usando for each",
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_9/es_9_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_9/es_9_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_9/es_9_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_9/es_9_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_9/es_9_cicli.json"
         },
         {
             "numero":10,
             "titolo":"esercizio numero 10",
             "tipo":"primi es con cicli ",
-            "testo":"",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "testo":"Trova il valore massimo in un vettore usando for each",
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_10/es_10_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_10/es_10_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_10/es_10_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_10/es_10_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_10/es_10_cicli.json"
         },
         {
             "numero":11,
             "titolo":"esercizio numero 11",
             "tipo":"primi es con cicli ",
-            "testo":"",
-            "pathimig":"",
-            "pathhtml":"",
-            "pathfile":"",
-            "pathfileexe":"",
-            "pathfilecodici":""
+            "testo":" Calcola la media dei valori in un vettore usando for each",
+            "pathimig":"../esercizi/primi_es_cicli_cpp/esercizio_11/es_11_cicli.png",
+            "pathhtml":"../esercizi/primi_es_cicli_cpp/esercizio_11/es_11_cicli.html",
+            "pathfile":"../esercizi/primi_es_cicli_cpp/esercizio_11/es_11_cicli.cpp",
+            "pathfileexe":"../esercizi/primi_es_cicli_cpp/esercizio_11/es_11_cicli.exe",
+            "pathfilecodici":"../esercizi/primi_es_cicli_cpp/esercizio_11/es_11_cicli.json"
         }
     ]
 }
