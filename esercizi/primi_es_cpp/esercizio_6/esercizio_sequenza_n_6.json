@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float spesa;\n    float costolitro;\n\n    cout << \"Inserire il costo di un litro di benzina: \";\n    cin >> costolitro;\n\n    spesa = (100.0 / 20.0) * costolitro;\n\n    cout << \"Il costo per fare 100km e': \" << spesa << endl;\n\n    system(\"pause\");\n}"
+}

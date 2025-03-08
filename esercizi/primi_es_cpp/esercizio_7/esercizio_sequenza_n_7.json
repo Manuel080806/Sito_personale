@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float numero;\n    float numero_finale;\n\n    cout << \"Inserisci un numero: \";\n    cin >> numero;\n\n    numero_finale = (numero * numero) * 2 + 1;\n\n    cout << \"Il numero finale e': \" << numero_finale << endl;\n\n    system(\"pause\");\n}"
+}

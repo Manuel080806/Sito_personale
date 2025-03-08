@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float base_maggiore;\n    float altezza;\n    float base_minore;\n    float area;\n\n    cout << \"Inserisci base maggiore: \";\n    cin >> base_maggiore;\n\n    base_minore = base_maggiore / 3;\n    altezza = base_minore * 2;\n    base_maggiore = altezza + base_minore;\n\n    area = (base_maggiore + base_minore) * altezza / 2;\n\n    cout << \"L'area e': \" << area << endl;\n\n    system(\"pause\");\n}"
+}

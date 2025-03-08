@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float prezzo_base;\n    float sconto;\n    float iva;\n    float prezzo_lordo;\n    float prezzo_scontato;\n\n    cout << \"Inserisci in sequenza i dati sul prezzo, lo sconto e l'IVA: \";\n    cin >> prezzo_base >> sconto >> iva;\n\n    prezzo_scontato = prezzo_base - (prezzo_base * sconto / 100);\n    prezzo_lordo = prezzo_scontato * (1 + iva / 100);\n\n    cout << \"Il prezzo totale e': \" << prezzo_lordo << endl;\n\n    system(\"pause\");\n}"
+}

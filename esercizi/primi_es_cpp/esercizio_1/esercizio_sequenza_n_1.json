@@ -1,0 +1,3 @@
+{
+    "codice": "#include<iostream>\nusing namespace std;\n\nint main() {\n    int base;\n    int area;\n    int altezza;\n    int perimetro;\n    \n    cout << \"scrivere l'area del rettangolo\" << endl;\n    cin >> area;\n    cout << \"scrivere la base del rettangolo\" << endl;\n    cin >> base;\n    \n    altezza = area / base;\n    perimetro = 2 * (altezza + base);\n    \n    cout << \"il perimetro e' \" << perimetro << endl;\n    system(\"pause\");\n    \n    return 0;\n}"
+}

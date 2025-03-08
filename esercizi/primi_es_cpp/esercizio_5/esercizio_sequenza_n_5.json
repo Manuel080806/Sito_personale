@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float prezzo_con_iva;\n    float iva = 0.22;\n    float prezzo_netto;\n\n    cout << \"Inserire il prezzo comprensivo dell'IVA: \";\n    cin >> prezzo_con_iva;\n\n    prezzo_netto = prezzo_con_iva / (1 + iva);\n\n    cout << \"Il prezzo netto e': \" << prezzo_netto << endl;\n\n    system(\"pause\");\n}"
+}

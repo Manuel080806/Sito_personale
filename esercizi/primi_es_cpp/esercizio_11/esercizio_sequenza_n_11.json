@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n    float numero_enciclopedie;\n    float guadagno_mensile;\n    float stipendio_lordo;\n    float trattenute;\n\n    cout << \"Numero enciclopedie vendute: \";\n    cin >> numero_enciclopedie;\n\n    stipendio_lordo = 1000 + (numero_enciclopedie * 200);\n    trattenute = stipendio_lordo * 0.18;\n    guadagno_mensile = stipendio_lordo - trattenute;\n\n    cout << \"Guadagno mensile: \" << guadagno_mensile << endl;\n\n    system(\"pause\");\n}"
+}

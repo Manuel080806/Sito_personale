@@ -10,5 +10,5 @@ int main ()
     cin>>prezzo_con_iva;
     prezzo_netto=prezzo_con_iva/1.22;
     cout<<"il prezzo netto e':"<<prezzo_netto;
-    system "pause"
+    system ("pause");
 }
