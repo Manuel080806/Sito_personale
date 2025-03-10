@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int va, vb, vc;\n\n    cout << \"Inserire tre voti:\" << endl;\n    cin >> va >> vb >> vc;\n\n    if (va >= 6 && vb >= 6 && vc >= 6)\n        cout << \"Sufficienti\" << endl;\n\n    system(\"pause\");\n}"
+}

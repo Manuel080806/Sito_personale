@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Inserire dati di input\n    int uno, due;\n\n    cout << \"Inserire due numeri: \" << endl;\n    cin >> uno >> due;\n\n    // Logica del programma\n    if ((uno % 2 == 0) && (due % 2 == 0))\n        cout << \"Vittoria\" << endl;\n    else if ((uno % 2 == 1) && (due % 2 == 1))\n        cout << \"Vittoria\" << endl;\n    else\n        cout << \"Sconfitta\" << endl;\n\n    /* Alternativa compatta:\n    uno = uno % 2;\n    due = due % 2;\n    if (uno == due)\n        cout << \"Vittoria\";\n    else\n        cout << \"Sconfitta\";\n    */\n\n    system(\"pause\");\n}"
+}

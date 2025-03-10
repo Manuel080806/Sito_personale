@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n    float a, b, c, d;\n    float a_b, c_d;\n\n    cout << \"Inserisci quattro numeri:\" << endl;\n    cin >> a >> b >> c >> d;\n\n    a_b = a + b;\n    c_d = c + d;\n\n    if (a_b <= c_d)\n        cout << \"La somma dei primi due numeri e' minore o uguale alla somma degli altri due\" << endl;\n\n    system(\"pause\");\n}"
+}

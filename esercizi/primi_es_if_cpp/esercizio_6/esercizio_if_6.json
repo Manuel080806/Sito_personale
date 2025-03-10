@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n    int voto_a, voto_b, voto_c, voto_d;\n    int insufficienze = 0; // Inizializzazione corretta\n\n    cout << \"Inserisci 4 voti:\" << endl;\n    cin >> voto_a >> voto_b >> voto_c >> voto_d;\n\n    if (voto_a < 6)\n        insufficienze++;\n    if (voto_b < 6)\n        insufficienze++;\n    if (voto_c < 6)\n        insufficienze++;\n    if (voto_d < 6)\n        insufficienze++;\n\n    cout << \"Numero di insufficienze: \" << insufficienze << endl;\n\n    system(\"pause\");\n}"
+}

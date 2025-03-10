@@ -1,0 +1,4 @@
+
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Input dei dati\n    int consumo_mensile;\n    float importo = 0;\n\n    cout << \"Inserire consumo mensile: \";\n    cin >> consumo_mensile;\n\n    // Logica del programma\n    if (consumo_mensile <= 500) {\n        cout << \"L'importo e' 20 euro\" << endl;\n    } \n    else if (consumo_mensile <= 1000) {\n        importo = 20 + 0.08 * (consumo_mensile - 500);\n        cout << \"L'importo e': \" << importo << \" euro\" << endl;\n    } \n    else {\n        importo = 60 + 0.05 * (consumo_mensile - 1000);\n        cout << \"L'importo e': \" << importo << \" euro\" << endl;\n    }\n\n    system(\"pause\");\n}"
+}

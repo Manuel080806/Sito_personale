@@ -1,0 +1,4 @@
+
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Lettura dati di input\n    float cateto_a, cateto_b, ipotenusa;\n\n    cout << \"Inserire il primo cateto di un triangolo: \";\n    cin >> cateto_a;\n\n    cout << \"Inserire il secondo cateto di un triangolo: \";\n    cin >> cateto_b;\n\n    cout << \"Inserire l'ipotenusa di un triangolo: \";\n    cin >> ipotenusa;\n\n    // Logica del programma\n    if (cateto_a == cateto_b && cateto_b == ipotenusa)\n        cout << \"Il triangolo è equilatero\" << endl;\n    else if (cateto_a == cateto_b || cateto_a == ipotenusa || cateto_b == ipotenusa)\n        cout << \"Il triangolo è isoscele\" << endl;\n    else\n        cout << \"Il triangolo è scaleno\" << endl;\n\n    system(\"pause\");\n}"
+}

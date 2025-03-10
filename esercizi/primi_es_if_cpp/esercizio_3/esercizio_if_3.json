@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n    int numero;\n\n    cout << \"Inserire un numero: \";\n    cin >> numero;\n\n    if (numero % 2 == 0)\n        cout << \"Il numero e' pari\" << endl;\n    else\n        cout << \"Il numero e' dispari\" << endl;\n\n    system(\"pause\");\n}"
+}

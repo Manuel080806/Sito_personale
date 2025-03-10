@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int num;\n\n    cout << \"Inserire un numero:\" << endl;\n    cin >> num;\n\n    if (num % 3 == 0 && num % 5 == 0)\n        cout << \"Divisibile\" << endl;\n\n    system(\"pause\");\n}"
+}

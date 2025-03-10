@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Lettura dati di input\n    int uno, due, tre;\n    int minore;\n\n    cout << \"Inserisci tre numeri: \";\n    cin >> uno >> due >> tre;\n\n    // Logica del programma\n    if (uno < due) {\n        if (uno < tre)\n            minore = uno;\n        else\n            minore = tre;\n    } else {\n        if (due < tre)\n            minore = due;\n        else\n            minore = tre;\n    }\n\n    // Scrittura dei dati di output\n    cout << \"Il numero minore e': \" << minore << endl;\n\n    system(\"pause\");\n}"
+}

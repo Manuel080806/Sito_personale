@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n    float numero_a, numero_b, numero_maggiore;\n\n    cout << \"Inserisci due numeri: \";\n    cin >> numero_a >> numero_b;\n\n    if (numero_a > numero_b)\n        numero_maggiore = numero_a;\n    else\n        numero_maggiore = numero_b;\n\n    cout << \"Il numero maggiore e': \" << numero_maggiore << endl;\n\n    system(\"pause\");\n}"
+}
