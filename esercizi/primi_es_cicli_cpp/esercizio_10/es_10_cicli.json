@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {   \n    // Definizione del vettore di numeri\n    vector<int> numeri = {12, 45, 7, 23, 56, 89, 34, 67, 5, 19};\n    \n    // Assumiamo che il primo elemento sia il massimo iniziale\n    int massimo = numeri[0];\n    \n    // Ciclo per trovare il massimo nel vettore\n    for (const auto& num : numeri) {\n        if (num > massimo) {\n            massimo = num;\n        }\n    }\n    \n    // Stampa del valore massimo trovato\n    cout << \"Il valore massimo nel vettore e': \" << massimo << endl << endl;\n    system(\"pause\");\n}"
+}

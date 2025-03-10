@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n    cout << \"Inserisci un numero intero positivo: \";\n    cin >> n;\n\n    cout << \"I divisori di \" << n << \" sono: \";\n    \n    // Ciclo per trovare i divisori di n\n    for (int i = 1; i <= n; i++) {\n        if (n % i == 0) {\n            cout << i << \" \";\n        }\n    }\n\n    cout << endl << endl;\n    system(\"pause\");\n}"
+}

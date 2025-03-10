@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n\n    cout << \"Inserire un numero:\" << endl;\n    cin >> n;\n\n    // Se il numero è dispari, decrementa di 1 per renderlo pari\n    if (n % 2 != 0)\n        n = n - 1;\n\n    // Ciclo do-while per stampare i numeri pari in ordine decrescente\n    do {\n        cout << n << endl;\n        n = n - 2;\n    } while (n != 0);\n\n    system(\"pause\");\n}"
+}

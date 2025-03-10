@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n    cout << \"Inserisci il numero di righe per il triangolo: \";\n    cin >> n;\n    \n    // Ciclo per stampare il triangolo di asterischi\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            cout << \"*\";\n        }\n        cout << endl;\n    }\n\n    cout << endl;\n    system(\"pause\");\n}"
+}

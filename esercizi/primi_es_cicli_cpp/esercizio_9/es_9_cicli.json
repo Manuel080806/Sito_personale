@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    // Definizione di un array di numeri\n    vector<int> numeri = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};\n    \n    // Stampa degli elementi dell'array\n    cout << \"Elementi dell'array: \";\n    for (const auto& num : numeri) {\n        cout << num << \" \";\n    }\n\n    cout << endl << endl;\n    system(\"pause\");\n}"
+}

@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Ciclo per stampare i numeri pari da 2 a 50\n    for (int i = 2; i <= 50; i += 2) {\n        cout << i << \" \";\n    }\n\n    cout << endl << endl;\n    system(\"PAUSE\");\n}"
+}

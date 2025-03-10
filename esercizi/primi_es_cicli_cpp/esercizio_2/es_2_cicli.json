@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n1, n2;\n\n    cout << \"Iniziamo a stampare\" << endl;\n    cout << \"Inserisci il primo numero:\" << endl;\n    cin >> n1;\n    cout << \"Inserisci il secondo numero:\" << endl;\n    cin >> n2;\n\n    int i = n1;\n    cout << \"I numeri all'interno dell'intervallo sono:\" << endl;\n\n    // Ciclo per stampare i numeri nell'intervallo\n    while (i <= n2) {\n        cout << i << endl;\n        i = i + 1;\n    }\n\n    system(\"PAUSE\");\n}"
+}

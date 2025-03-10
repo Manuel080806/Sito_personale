@@ -1,0 +1,3 @@
+{
+    "codice": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    // Definizione del vettore di numeri\n    vector<int> numeri = {15, 23, 36, 42, 58, 77, 91, 14, 35, 29};\n    \n    // Variabile per calcolare la somma\n    int somma = 0;\n    \n    // Sommiamo tutti gli elementi del vettore\n    for(const auto& num : numeri) {\n        somma += num;\n    }\n    \n    // Calcoliamo la media\n    double media = static_cast<double>(somma) / numeri.size();\n    \n    // Stampa della media\n    cout << \"La media dei valori nel vettore e': \" << media << endl << endl;\n    system(\"pause\");\n}"
+}
